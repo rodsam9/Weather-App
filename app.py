@@ -1,8 +1,6 @@
 import requests
 import configparser
-from requests import api
 from flask import Flask, render_template, request
-from werkzeug.datastructures import ContentSecurityPolicy
 
 
 app = Flask(__name__)
@@ -23,8 +21,9 @@ def results():
     temperature = "{0:.2f}".format(weather_data["main"]["temp"])
     feels_like_temperature = "{0:.2f}".format(weather_data["main"]["feels_like"])
     city_name = weather_data["name"]
+    country = weather_data["sys"]["country"]
 
-    return render_template("results.html", temperature=temperature, feels_like_temperature=feels_like_temperature, city_name=city_name)
+    return render_template("results.html", temperature=temperature, feels_like_temperature=feels_like_temperature, city_name=city_name, country=country)
 
 if __name__ == '__main__':
     app.run()
