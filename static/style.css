@@ -26,3 +26,16 @@ form input {
     font-size: 2rem;
 
 }
+.media-content {
+    background-color: lightblue;
+    padding: .25rem;
+}
+.media-content h2 {
+    font-size: 2.5rem;
+    background-color: white;
+    
+}
+.media-content h3 {
+    font-size: 1.5rem;
+    background-color: lightcoral;
+}
