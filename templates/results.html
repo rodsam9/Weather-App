@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Weather App</title>
+    <title>My Weather App - Results</title>
     <meta name="description" content="This webpage will ask for user to type in a city that he/she would like to see the weather of.">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <header>
-    <h1>Weather App</h1>
+    <h1>Weather App Results</h1>
 </header>
 <body>
-    <div class="input-form">
-        <form action="{{ url_for('results')}}" method="post">
-            Enter a City: <input type="text" name="city_name"><br>
-            <input type="submit" value="Submit">
-        </form>
+    <div class="media-content">
+        <h2>City: {{city_name}}</h2>
+        <h2>Temperature: {{temperature}}&#176; F</h2>
+        <h3>Feels like: {{feels_like_temperature}}&#176; F</h3>
     </div>
 </body>
 </html>
