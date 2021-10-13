@@ -18,8 +18,8 @@ def results():
     api_key = get_api_key()
     weather_data = get_weather(city, api_key)
     
-    temperature = "{0:.2f}".format(weather_data["main"]["temp"])
-    feels_like_temperature = "{0:.2f}".format(weather_data["main"]["feels_like"])
+    temperature = (weather_data["main"]["temp"])
+    feels_like_temperature = (weather_data["main"]["feels_like"])
     city_name = weather_data["name"]
     country = weather_data["sys"]["country"]
 
